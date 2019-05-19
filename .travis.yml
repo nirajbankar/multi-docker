@@ -3,10 +3,10 @@ services:
   -docker
 
 before_install:
-  -docker build -t nirajbankar/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t nirajbankar/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  -docker run nirajbankar/react-test npm run ci_test -- --coverage
+  - docker run nirajbankar/react-test npm run ci_test -- --coverage
 
 language: minimal
 
